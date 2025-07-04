@@ -1,0 +1,11 @@
+# Lista de bibliotecas Python necessárias
+# Arquivo que define as bibliotecas que o projeto precisa.
+#Para instalar, basta rodar pip install -r requirements.txt no terminal.
+
+psycopg2-binary
+
+
+#Para a manipulação de datas (relativedelta), você precisará instalar uma biblioteca. Com o seu ambiente virtual ativo, rode:
+# BASH: pip install python-dateutil
+
+python-dateutil

@@ -1,0 +1,24 @@
+2025-05-03 23:35:23,432 - INFO - main_orchestrator - ====== INICIANDO PROCESSO DE ETL DA TABELA UNIFICADA ======
+2025-05-03 23:35:23,438 - INFO - step_00_extraction - --- INICIANDO ETAPA 0: EXTRAÇÃO DE DADOS DO FTP ---
+2025-05-03 23:35:23,440 - INFO - step_00_extraction - Conectando ao servidor FTP: ftp2.datasus.gov.br...
+2025-05-03 23:35:23,954 - INFO - step_00_extraction - Buscando o arquivo da Tabela Unificada mais recente no FTP...
+2025-05-03 23:35:24,352 - INFO - step_00_extraction - Procurando por arquivos que comecem com: 'TabelaUnificada_202505'
+2025-05-03 23:35:24,353 - INFO - step_00_extraction - SUCESSO! Arquivo encontrado: TabelaUnificada_202505_v2505061938.zip
+2025-05-03 23:35:24,353 - INFO - step_00_extraction - Baixando arquivo 'TabelaUnificada_202505_v2505061938.zip'...
+2025-05-03 23:35:25,807 - INFO - step_00_extraction - Download concluído. Arquivo salvo em: ./downloads\TabelaUnificada_202505_v2505061938.zip
+2025-05-03 23:35:25,836 - INFO - step_00_extraction - Descompactando arquivo para a pasta específica: ./downloads/unzipped\TabelaUnificada_202505_v2505061938
+2025-05-03 23:35:27,139 - INFO - step_00_extraction - Descompactação concluída com sucesso.
+2025-05-03 23:35:27,139 - INFO - main_orchestrator - ETAPA 0 CONCLUÍDA. Competência: 202505, Dados em: ./downloads/unzipped\TabelaUnificada_202505_v2505061938
+2025-07-04 00:07:54,146 - INFO - main_orchestrator - ====== INICIANDO PROCESSO DE ETL DA TABELA UNIFICADA ======
+2025-07-04 00:07:54,168 - INFO - step_00_extraction - --- INICIANDO ETAPA 0: EXTRAÇÃO DE DADOS DO FTP ---
+2025-07-04 00:07:54,171 - INFO - step_00_extraction - Conectando ao servidor FTP: ftp2.datasus.gov.br...
+2025-07-04 00:07:54,659 - INFO - step_00_extraction - Buscando o arquivo da Tabela Unificada mais recente no FTP...
+2025-07-04 00:07:55,019 - INFO - step_00_extraction - Procurando por arquivos que comecem com: 'TabelaUnificada_202507'
+2025-07-04 00:07:55,044 - WARNING - step_00_extraction - Nenhum arquivo encontrado para a competência 202507. Tentando mês anterior...
+2025-07-04 00:07:55,225 - INFO - step_00_extraction - Procurando por arquivos que comecem com: 'TabelaUnificada_202506'
+2025-07-04 00:07:55,227 - INFO - step_00_extraction - SUCESSO! Arquivo encontrado: TabelaUnificada_202506_v2506061904.zip
+2025-07-04 00:07:55,231 - INFO - step_00_extraction - Baixando arquivo 'TabelaUnificada_202506_v2506061904.zip'...
+2025-07-04 00:07:56,514 - INFO - step_00_extraction - Download concluído. Arquivo salvo em: ./downloads\TabelaUnificada_202506_v2506061904.zip
+2025-07-04 00:07:56,536 - INFO - step_00_extraction - Descompactando arquivo para a pasta específica: ./downloads/unzipped\TabelaUnificada_202506_v2506061904
+2025-07-04 00:07:57,910 - INFO - step_00_extraction - Descompactação concluída com sucesso.
+2025-07-04 00:07:57,911 - INFO - main_orchestrator - ETAPA 0 CONCLUÍDA. Competência: 202506, Dados em: ./downloads/unzipped\TabelaUnificada_202506_v2506061904

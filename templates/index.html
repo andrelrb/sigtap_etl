@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adicionar Versão SIGTAP</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        label { display: block; margin-bottom: 5px; }
+        input[type="text"] { margin-bottom: 10px; padding: 8px; width: 200px; }
+        input[type="submit"] { padding: 10px 15px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+        input[type="submit"]:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+    <h2>Adicionar Nova Versão SIGTAP</h2>
+
+    <form action="{{ url_for('add_version') }}" method="post">
+        <div>
+            <label for="competencia">Competência (Formato AAAAMM):</label>
+            <input type="text" id="competencia" name="competencia" required pattern="\d{6}" title="Digite 6 dígitos (Ano e Mês)">
+        </div>
+        <div>
+            <input type="submit" value="Adicionar Versão">
+        </div>
+    </form>
+</body>
+</html>

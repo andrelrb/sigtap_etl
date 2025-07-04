@@ -1,0 +1,56 @@
+Log de Erros - Execução de Scripts SQL
+Pasta Processada: insert_20250516_versaoID_3_competencia_202505
+Caminho Completo: G:\Meu Drive\Indra company\SECRETARIA DE SAUDE - RECIFE\CAPS\GerarSQL_v2\insert_20250516_versaoID_3_competencia_202505
+Data da Execução: 2025-05-16 00:23:11
+Version ID (da pasta): 3
+Competência (do DB para este Version ID): 202505
+
+--- Erro 1 ---
+Script: tb_forma_organizacao_insert.sql
+Tabela Alvo: public.tb_forma_organizacao
+Tipo de Erro: UniqueViolation
+PGCODE: 23505
+PGERROR: ERRO:  duplicar valor da chave viola a restrição de unicidade "uq_tb_forma_organizacao_forma_organizacao_0"
+DETAIL:  Chave (co_forma_organizacao, version_id)=(01, 3) já existe.
+Mensagem Primária: duplicar valor da chave viola a restrição de unicidade "uq_tb_forma_organizacao_forma_organizacao_0"
+Detalhe da Mensagem: Chave (co_forma_organizacao, version_id)=(01, 3) já existe.
+Erro Completo: ERRO:  duplicar valor da chave viola a restrição de unicidade "uq_tb_forma_organizacao_forma_organizacao_0"
+DETAIL:  Chave (co_forma_organizacao, version_id)=(01, 3) já existe.
+
+
+--- Erro 2 ---
+Script: tb_sia_sih_insert.sql
+Tabela Alvo: public.tb_sia_sih
+Tipo de Erro: UniqueViolation
+PGCODE: 23505
+PGERROR: ERRO:  duplicar valor da chave viola a restrição de unicidade "uq_tb_sia_sih_procedimento_sia_sih_0"
+DETAIL:  Chave (co_procedimento_sia_sih, version_id)=(04011015, 3) já existe.
+Mensagem Primária: duplicar valor da chave viola a restrição de unicidade "uq_tb_sia_sih_procedimento_sia_sih_0"
+Detalhe da Mensagem: Chave (co_procedimento_sia_sih, version_id)=(04011015, 3) já existe.
+Erro Completo: ERRO:  duplicar valor da chave viola a restrição de unicidade "uq_tb_sia_sih_procedimento_sia_sih_0"
+DETAIL:  Chave (co_procedimento_sia_sih, version_id)=(04011015, 3) já existe.
+
+
+--- Erro 3 ---
+Script: rl_procedimento_habilitacao_insert.sql
+Tabela Alvo: public.rl_procedimento_habilitacao
+Tipo de Erro: UniqueViolation
+PGCODE: 23505
+PGERROR: ERRO:  duplicar valor da chave viola a restrição de unicidade "rl_procedimento_habilitacao_pkey"
+DETAIL:  Chave (version_id, co_procedimento, co_habilitacao)=(3, 0301130019, 0803) já existe.
+Mensagem Primária: duplicar valor da chave viola a restrição de unicidade "rl_procedimento_habilitacao_pkey"
+Detalhe da Mensagem: Chave (version_id, co_procedimento, co_habilitacao)=(3, 0301130019, 0803) já existe.
+Erro Completo: ERRO:  duplicar valor da chave viola a restrição de unicidade "rl_procedimento_habilitacao_pkey"
+DETAIL:  Chave (version_id, co_procedimento, co_habilitacao)=(3, 0301130019, 0803) já existe.
+
+
+--- Erro 4 ---
+Script: rl_procedimento_tuss_insert.sql
+Tabela Alvo: public.rl_procedimento_tuss
+Tipo de Erro: ProgrammingError
+PGCODE: None
+PGERROR: N/A
+Mensagem Primária: None
+Detalhe da Mensagem: None
+Erro Completo: can't execute an empty query
+

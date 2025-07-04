@@ -1,0 +1,17 @@
+Log de Erros - Execução de Scripts SQL
+Pasta Processada: insert_20250516_versaoID_1_competencia_202504
+Caminho Completo: G:\Meu Drive\Indra company\SECRETARIA DE SAUDE - RECIFE\CAPS\GerarSQL_v2\insert_20250516_versaoID_1_competencia_202504
+Data da Execução: 2025-05-16 00:07:44
+Version ID (da pasta): 1
+Competência (do DB para este Version ID): 202504
+
+--- Erro 1 ---
+Script: rl_procedimento_tuss_insert.sql
+Tabela Alvo: public.rl_procedimento_tuss
+Tipo de Erro: ProgrammingError
+PGCODE: None
+PGERROR: N/A
+Mensagem Primária: None
+Detalhe da Mensagem: None
+Erro Completo: can't execute an empty query
+

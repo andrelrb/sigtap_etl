@@ -18,11 +18,11 @@ except ImportError:
     sys.exit(1)
 
 # --- CONFIGURAÇÃO PRINCIPAL ---
-#CAMINHO_PASTA_DADOS = r'G:\Meu Drive\Indra company\SECRETARIA_DE_SAUDE_RECIFE\CAPS\GerarSQL_V2\downloads\unzipped\TabelaUnificada_202505_v2505061938'
-CAMINHO_PASTA_DADOS = r'G:\Meu Drive\Indra company\SECRETARIA_DE_SAUDE_RECIFE\CAPS\GerarSQL_V2\downloads\unzipped\TabelaUnificada_202506_v2506061904'
+#CAMINHO_PASTA_DADOS = r'G:\Meu Drive\Indra company\SECRETARIA_DE_SAUDE_RECIFE\CAPS\sigtap_etl\downloads\unzipped\TabelaUnificada_202505_v2505061938'
+CAMINHO_PASTA_DADOS = r'G:\Meu Drive\Indra company\SECRETARIA_DE_SAUDE_RECIFE\CAPS\sigtap_etl\downloads\unzipped\TabelaUnificada_202506_v2506061904'
 
 # --- Configurações Gerais ---
-CAMINHO_BASE_SAIDA_SQL = r'G:\Meu Drive\Indra company\SECRETARIA_DE_SAUDE_RECIFE\CAPS\GerarSQL_v2\insert_db'
+CAMINHO_BASE_SAIDA_SQL = r'G:\Meu Drive\Indra company\SECRETARIA_DE_SAUDE_RECIFE\CAPS\sigtap_etl\insert_db'
 SUFIXO_LAYOUT = '_layout.txt'
 COLUNA_VERSION_FK = 'version_id'
 CODIFICACAO_ARQUIVOS_DADOS = 'latin-1'

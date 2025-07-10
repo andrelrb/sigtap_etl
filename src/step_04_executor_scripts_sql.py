@@ -17,7 +17,7 @@ DB_PASSWORD = os.environ.get('DB_PASSWORD_SIGTAP', 'root')
 DB_PORT = os.environ.get('DB_PORT_SIGTAP', '5432')
 
 # --- Configurações Gerais do Script ---
-CAMINHO_BASE_PASTAS_SQL = os.environ.get('SIGTAP_CAMINHO_BASE_SAIDA_SQL', r'G:\Meu Drive\Indra company\SECRETARIA_DE_SAUDE_RECIFE\CAPS\GerarSQL_v2\insert_db')
+CAMINHO_BASE_PASTAS_SQL = os.environ.get('SIGTAP_CAMINHO_BASE_SAIDA_SQL', r'G:\Meu Drive\Indra company\SECRETARIA_DE_SAUDE_RECIFE\CAPS\sigtap_etl\insert_db')
 CODIFICACAO_ARQUIVOS_SQL = 'utf-8' 
 
 COLUNA_VERSION_FK_EM_TABELAS = 'version_id'

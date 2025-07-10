@@ -9,10 +9,10 @@ import datetime
 # import pandas as pd # Se for usar descrições do Excel, descomente e configure
 
 # --- Configurações ---
-CAMINHO_PASTA_LAYOUTS = os.environ.get('SIGTAP_CAMINHO_PASTA_LAYOUTS', r'G:\Meu Drive\Indra company\SECRETARIA_DE_SAUDE_RECIFE\CAPS\GerarSQL_V2\downloads\unzipped\TabelaUnificada_202505_v2505061938')
+CAMINHO_PASTA_LAYOUTS = os.environ.get('SIGTAP_CAMINHO_PASTA_LAYOUTS', r'G:\Meu Drive\Indra company\SECRETARIA_DE_SAUDE_RECIFE\CAPS\sigtap_etl\downloads\unzipped\TabelaUnificada_202507_v2507041724')
 #CAMINHO_PASTA_LAYOUTS = os.environ.get('SIGTAP_CAMINHO_PASTA_LAYOUTS', r'G:\Meu Drive\Indra company\SECRETARIA_DE_SAUDE_RECIFE\CAPS\GerarSQL_V2\downloads\unzipped\TabelaUnificada_202506_v2506061904')
-CAMINHO_SAIDA_SQL = os.environ.get('SIGTAP_CAMINHO_SAIDA_SQL_DDL', r'G:\Meu Drive\Indra company\SECRETARIA_DE_SAUDE_RECIFE\CAPS\GerarSQL_V2\create_db')
-NOME_ARQUIVO_SAIDA_SCHEMA = 'create_sigtap_tables_schema_v04-07_07.sql' 
+CAMINHO_SAIDA_SQL = os.environ.get('SIGTAP_CAMINHO_SAIDA_SQL_DDL', r'G:\Meu Drive\Indra company\SECRETARIA_DE_SAUDE_RECIFE\CAPS\sigtap_etl\create_db')
+NOME_ARQUIVO_SAIDA_SCHEMA = 'create_sigtap_tables_schema_v08-07_08.sql' 
 
 SUFIXO_LAYOUT = '_layout.txt'
 TABELA_VERSION = 'tb_version'

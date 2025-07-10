@@ -1,0 +1,37 @@
+040009Atendimento/acompanhamento em reabilitação física, mental, visual, auditiva e múltiplas deficiências202507
+040013Atendimento/acompanhamento de diagnóstico de doenças endocrinas/metabólicas e nutricionais          202507
+040017Nefrologia                                                                                          202507
+040024Cirurgia do aparelho digestivo, orgãos anexos e parede abdominal(inclui pré e pós operatório)       202507
+040028Outras cirurgias plásticas/reparadoras                                                              202507
+040030Sequenciais                                                                                         202507
+040032Transplantes de orgãos, tecidos e células                                                           202507
+040033Medicamentos para transplante                                                                       202507
+040038OPM para transplantes                                                                               202507
+040041Central Nacional de Regulação de Alta Complexidade (CNRAC)                                          202507
+040044Redesignação e Acompanhamento                                                                       202507
+040049Implementar Cirg. CV Pediátrica                                                                     202507
+040055Transplante - Histocompatibilidade                                                                  202507
+040062Doenças Raras                                                                                       202507
+040063Cadeiras de Rodas                                                                                   202507
+040065Medicamentos em Urgência                                                                            202507
+040066Cirurgias Eletivas - Componente Único                                                               202507
+040067Atenção Especializada em Saúde Auditiva                                                             202507
+040068Terapias Especializadas em Angiologia                                                               202507
+040069Tratamento de Doença Macular                                                                        202507
+040070OPME Não Relacionados ao Ato Cirúrgico                                                              202507
+040071Diagnóstico/tratamento em oncologia                                                                 202507
+040072Diagnóstico de trombofilia em gestante                                                              202507
+040073Reabilitação Pós-COVID-19                                                                           202507
+040074Telemedicina em Urgência                                                                            202507
+040075Fisioterapia Cardiovascular                                                                         202507
+040076Hemodinâmica em atendimento de urgência                                                             202507
+040077Exames Sorológicos e Imunológicos                                                                   202507
+040078QualiSUS Cardio                                                                                     202507
+040079Pré-cirúrgico em Cirurgias Prioritárias                                                             202507
+040080Redução das Filas de Procedimentos Eletivos.                                                        202507
+040081Síndrome Respiratória Aguda Grave - SRAG                                                            202507
+040082Alta Complexidade em Cardiologia                                                                    202507
+040083Cirurgia da Face e do Sistema Estomatognático                                                       202507
+040084Neurocirurgias                                                                                      202507
+040085Exames coprológicos                                                                                 202507
+040086Programa Mais Acesso a Especialistas (PMAE)                                                         202507

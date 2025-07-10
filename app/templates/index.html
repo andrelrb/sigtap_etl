@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Controle - SIGTAP ETL</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Painel de Controle - SIGTAP ETL</h1>
+            <p>Interface para execução do pipeline de Extração, Transformação e Carga.</p>
+        </header>
+
+        <div class="step-group">
+            <h2>Etapa 1: Configuração</h2>
+            <div class="card">
+                <h3>Banco de Dados</h3>
+                <p>As configurações atuais são lidas do arquivo <strong>config.ini</strong>.</p>
+                <div class="config-details">
+                    {% if db_config %}
+                        {% for key, value in db_config.items() %}
+                        <p><strong>{{ key }}:</strong> {{ value }}</p>
+                        {% endfor %}
+                    {% else %}
+                        <p>Configurações do banco de dados não encontradas.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="step-group">
+            <h2>Etapa 2: Instalação e Schema</h2>
+            <div class="card">
+                <h3>Extração e Criação da Estrutura do Banco</h3>
+                <p>Esta seção prepara o ambiente, baixa os dados e cria a estrutura de tabelas (schema) no banco de dados.</p>
+                <button class="btn" id="extraction">1. Baixar e Descompactar Dados</button>
+                <button class="btn" id="generate_schema">2. Gerar Script do Schema (DDL)</button>
+                <button class="btn" id="execute_schema">3. Executar Schema no Banco</button>
+                <pre class="output-box" id="output-install">Pressione um botão para iniciar...</pre>
+            </div>
+        </div>
+
+        <div class="step-group">
+            <h2>Etapa 3: População do Banco</h2>
+            <div class="card">
+                <h3>Geração e Execução de Inserts</h3>
+                <p>Lê os arquivos de dados, gera os scripts de INSERT e os executa para popular o banco de dados com a competência atual.</p>
+                <button class="btn" id="generate_inserts">4. Gerar Scripts de INSERT</button>
+                <button class="btn" id="execute_inserts">5. Executar Scripts no Banco</button>
+                <pre class="output-box" id="output-populate">Pressione um botão para iniciar...</pre>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // O JavaScript continua o mesmo, pois é genérico e funciona com os IDs dos botões.
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', async (event) => {
+                const stepId = event.target.id;
+                // Encontra a caixa de saída correspondente no mesmo card
+                const outputBox = event.target.closest('.card').querySelector('.output-box');
+                
+                outputBox.textContent = `Iniciando a etapa '${stepId}'... Por favor, aguarde. O processo pode demorar alguns minutos.`;
+                event.target.disabled = true; // Desabilita o botão
+                // Desabilita todos os outros botões para evitar execuções concorrentes
+                document.querySelectorAll('.btn').forEach(b => b.disabled = true);
+
+                try {
+                    const response = await fetch('/run_step', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ step: stepId }),
+                    });
+
+                    const result = await response.json();
+                    
+                    // Exibe a saída completa no final
+                    outputBox.textContent = result.output;
+                    // Muda a cor da caixa de acordo com o status
+                    outputBox.classList.remove('success', 'error');
+                    outputBox.classList.add(result.status);
+
+                } catch (error) {
+                    outputBox.textContent = 'Erro de comunicação com o servidor: ' + error;
+                    outputBox.classList.add('error');
+                } finally {
+                    // Reabilita todos os botões no final
+                    document.querySelectorAll('.btn').forEach(b => b.disabled = false);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

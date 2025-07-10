@@ -1,4 +1,0 @@
-01Ambulatorial                                                                                        202507
-02Hospitalar                                                                                          202507
-03Hospital Dia                                                                                        202507
-06Atenção Domiciliar                                                                                  202507

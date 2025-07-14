@@ -1,0 +1,73 @@
+100Serviço de Atenção a Saúde no Sistema Penitenciário                                                                     202507
+101Estratégia de Saúde da Família                                                                                          202507
+102Estratégias de Agentes Comunitário de Saúde                                                                             202507
+103Serviço de Atendimento Móvel de Urgências                                                                               202507
+104Regulação Assistêncial dos Serviços de Saúde                                                                            202507
+105Serviço de Atenção em Neurologia/ Neurocirurgia                                                                         202507
+106Serviço de Atenção a DST/HIV/AIDS                                                                                       202507
+107Atenção à Saúde Auditiva                                                                                                202507
+108Atenção a Saúde do Trabalhador                                                                                          202507
+109Serviço de Atenção a Saúde dos Adolecentes em Conflito com a Lei, em Regime de Internação e Internação Provisória       202507
+110Serviço de Atenção a Saúde Reprodutiva                                                                                  202507
+111Serviço de Atenção ao Paciente com Tuberculose                                                                          202507
+112Serviço de Atenção ao Pré-Natal e Nascimento                                                                            202507
+113Serviço de Atenção Domiciliar                                                                                           202507
+114Serviço de Atenção em Saúde Bucal                                                                                       202507
+115Serviço de Atenção Psicossocial                                                                                         202507
+116Serviço de Atenção Cardiovascular/Cardiologia                                                                           202507
+117Serviço de Cirurgia Reparadora                                                                                          202507
+118Serviço de Cirurgia Torácica                                                                                            202507
+119Serviço de Controle de Tabagismo                                                                                        202507
+120Serviço de Diagnóstico por Anatomia Patológica e/ou Citopatologia                                                       202507
+121Diagnóstico por Imagem                                                                                                  202507
+122Serviço de Diagnóstico por Métodos Gráficos/Dinâmicos                                                                   202507
+123Serviço de Dispensação de Órteses, Próteses e Materiais Especiais                                                       202507
+124Serviço de Endocrinologia                                                                                               202507
+125Serviço de Farmácia                                                                                                     202507
+126Serviço de Fisioterapia                                                                                                 202507
+127Serviço de Atenção à Obesidade                                                                                          202507
+128Serviço de Hemoterapia                                                                                                  202507
+129Servico de Laboratório de Histocompatibilidade                                                                          202507
+130Atenção à Doença Renal Crônica                                                                                          202507
+131Serviço de Oftalmologia                                                                                                 202507
+132Serviço de Oncologia                                                                                                    202507
+133Serviço de Pneumologia                                                                                                  202507
+134Serviço de Práticas Integrativas e Complementares                                                                       202507
+135Serviço de Reabilitação                                                                                                 202507
+136Serviço de Suporte Nutricional                                                                                          202507
+137Serviço de Telemedicina                                                                                                 202507
+138Serviço de Traumato-Ortopedia                                                                                           202507
+139Serviço de Triagem Neonatal                                                                                             202507
+140Serviço de Urgência e Emergência                                                                                        202507
+141Serviço de Vigilância em Saúde                                                                                          202507
+142Serviço de Endoscopia                                                                                                   202507
+143Serviço Móvel de Urgência (exceto SAMU)                                                                                 202507
+144Serviço Posto de Coleta de Materiais Biológicos                                                                         202507
+145Serviço de Diagnóstico por Laboratório Clínico                                                                          202507
+146Serviço de Videolaparoscopia                                                                                            202507
+147Serviço de Apoio a Saúde da Família                                                                                     202507
+148Hospital-Dia                                                                                                            202507
+149Transplante                                                                                                             202507
+150Cirurgia Vascular                                                                                                       202507
+151Medicina Nuclear                                                                                                        202507
+152Atenção à Saúde da População Indígena                                                                                   202507
+153Atenção Especializada no Processo Transexualizador                                                                      202507
+154Serviço de Banco de Tecidos                                                                                             202507
+155Serviço de Traumatologia  Ortopedia                                                                                     202507
+157Serviço de Laboratorio de Protese Dentaria                                                                              202507
+158Serviço de Atenção Integral em Hanseniase                                                                               202507
+159Atenção Primária                                                                                                        202507
+160Teleconsultoria                                                                                                         202507
+161Consultório na Rua                                                                                                      202507
+162Serviço de Terapia Intensiva                                                                                            202507
+163Serviço de Cuidados Intermediários                                                                                      202507
+164Serviço de Órteses,Próteses e Materiais Especiais em Reabilitação                                                       202507
+165Atenção às Pessoas em Situação de Violência Sexual                                                                      202507
+166Serviço de  Análise Laboratorial  de Produtos Sujeitos á  Vigilância Sanitária                                          202507
+167Atendimento Itinerante de Asistência e Ensino em Saúde                                                                  202507
+168Atenção Às Pessoas com Doenças Raras                                                                                    202507
+169Serviço de Atenção em Urologia                                                                                          202507
+170Comissões e Comitês                                                                                                     202507
+171Cuidados Paliativos                                                                                                     202507
+173Logística de Imunobiológicos                                                                                            202507
+174Imunização                                                                                                              202507

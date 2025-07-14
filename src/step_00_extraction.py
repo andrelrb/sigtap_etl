@@ -1,7 +1,7 @@
 # Nome do arquivo: step_00_extraction.py
-# Versão: 1.0
-# Descrição: Baixa e descompacta os dados mais recentes do FTP do DATASUS.
-#            Lê as configurações do arquivo config.ini.
+# Versão: 1.2 (Adiciona limpeza automática de arquivos .zip antigos)
+# Descrição: Baixa o arquivo mais recente do FTP e, ao final, limpa a pasta de
+#            downloads, mantendo apenas o arquivo que acabou de ser baixado.
 
 import os
 import ftplib
@@ -9,6 +9,7 @@ import zipfile
 import datetime
 import configparser
 import sys
+import shutil
 
 def obter_raiz_projeto():
     """Encontra e retorna o caminho absoluto da pasta raiz do projeto."""
@@ -32,80 +33,93 @@ def carregar_config(project_root):
 
 def download_and_unzip(config):
     """
-    Função principal que executa o download e a descompactação.
+    Função principal que executa o download, descompactação e limpeza.
     """
+    caminho_local_zip = None # Inicializa a variável
     try:
         ftp_config = config['FTP']
         path_config = config['PATHS']
         
-        # Define os caminhos a partir da raiz do projeto
         project_root = obter_raiz_projeto()
-        download_dir = os.path.join(project_root, path_config['download_dir'])
-        unzip_dir = os.path.join(project_root, path_config['unzip_dir'])
-
-        # Garante que as pastas de destino existam
+        download_dir = os.path.join(project_root, path_config.get('download_dir', 'downloads'))
+        unzip_base_dir = os.path.join(project_root, path_config.get('unzip_dir', 'downloads/unzipped'))
         os.makedirs(download_dir, exist_ok=True)
-        os.makedirs(unzip_dir, exist_ok=True)
+        os.makedirs(unzip_base_dir, exist_ok=True)
 
-        # Determina o nome do arquivo a ser baixado (competência atual)
-        competencia = datetime.datetime.now().strftime('%Y%m')
-        # O nome do arquivo pode variar, ajuste se necessário
-        nome_arquivo_zip = f"TabelaUnificada_{competencia}.zip"
-        caminho_local_zip = os.path.join(download_dir, nome_arquivo_zip)
+        competencia_atual = datetime.datetime.now().strftime('%Y%m')
+        prefixo_arquivo = f"TabelaUnificada_{competencia_atual}"
 
         print(f"--- Iniciando Etapa 0: Extração ---")
         print(f"Conectando ao servidor FTP: {ftp_config['server']}...")
 
-        # Conexão e download do FTP
+        nome_arquivo_zip = None
         with ftplib.FTP(ftp_config['server']) as ftp:
-            ftp.login(user=ftp_config['user'], passwd=ftp_config.get('password', ''))
+            ftp.login(user=ftp_config.get('user', 'anonymous'), passwd=ftp_config.get('password', ''))
             ftp.cwd(ftp_config['path'])
             
-            print(f"Procurando pelo arquivo: {nome_arquivo_zip}")
+            print(f"Listando arquivos no diretório para encontrar o prefixo: {prefixo_arquivo}...")
+            lista_arquivos = ftp.nlst()
+            
+            for nome in lista_arquivos:
+                if nome.startswith(prefixo_arquivo) and nome.endswith('.zip'):
+                    nome_arquivo_zip = nome
+                    break
+            
+            if not nome_arquivo_zip:
+                raise FileNotFoundError(f"Nenhum arquivo encontrado para a competência {competencia_atual} no FTP.")
+
+            print(f"Arquivo encontrado no servidor: {nome_arquivo_zip}")
+            caminho_local_zip = os.path.join(download_dir, nome_arquivo_zip)
+
+            print(f"Baixando para: {caminho_local_zip}")
             with open(caminho_local_zip, 'wb') as f:
                 ftp.retrbinary(f"RETR {nome_arquivo_zip}", f.write)
-            
-            print(f"Download concluído: {caminho_local_zip}")
+            print("Download concluído.")
 
-        # Descompactação
-        print(f"Descompactando arquivos para: {unzip_dir}")
+        pasta_destino_nome = os.path.splitext(nome_arquivo_zip)[0]
+        pasta_destino_final = os.path.join(unzip_base_dir, pasta_destino_nome)
+        
+        print(f"Descompactando para: {pasta_destino_final}")
+        if os.path.exists(pasta_destino_final):
+            print(f"  Aviso: A pasta de destino '{pasta_destino_nome}' já existe. Removendo para uma extração limpa.")
+            shutil.rmtree(pasta_destino_final)
+            
         with zipfile.ZipFile(caminho_local_zip, 'r') as zip_ref:
-            # Para evitar que os arquivos fiquem dentro de uma subpasta com o mesmo nome
-            # vamos extrair e, se necessário, mover
-            nome_da_pasta_no_zip = zip_ref.namelist()[0].split('/')[0]
-            caminho_extracao_temporario = os.path.join(unzip_dir, "temp_extracao")
-            zip_ref.extractall(caminho_extracao_temporario)
-            
-            # Move os arquivos da subpasta para a pasta de destino final
-            pasta_real_dos_arquivos = os.path.join(caminho_extracao_temporario, nome_da_pasta_no_zip)
-            pasta_destino_final = os.path.join(unzip_dir, nome_da_pasta_no_zip)
+            zip_ref.extractall(pasta_destino_final)
+        
+        print("Arquivos descompactados com sucesso.")
 
-            # Se a pasta de destino já existir, apaga para garantir uma extração limpa
-            if os.path.exists(pasta_destino_final):
-                import shutil
-                shutil.rmtree(pasta_destino_final)
-            
-            os.rename(pasta_real_dos_arquivos, pasta_destino_final)
-            # Limpa a pasta temporária
-            import shutil
-            shutil.rmtree(caminho_extracao_temporario)
-
-            print("Arquivos descompactados com sucesso.")
-
-        # Limpeza do arquivo .zip
-        os.remove(caminho_local_zip)
-        print("Arquivo .zip removido.")
+        # --- NOVA REGRA DE LIMPEZA ---
+        print("\n--- Iniciando limpeza de arquivos .zip antigos ---")
+        print(f"Diretório de verificação: {download_dir}")
+        print(f"Mantendo arquivo mais recente: {nome_arquivo_zip}")
+        
+        arquivos_removidos = 0
+        for item in os.listdir(download_dir):
+            if item.endswith('.zip') and item != nome_arquivo_zip:
+                try:
+                    os.remove(os.path.join(download_dir, item))
+                    print(f"  -> Arquivo antigo removido: {item}")
+                    arquivos_removidos += 1
+                except OSError as e:
+                    print(f"  ERRO ao remover o arquivo {item}: {e}")
+        
+        if arquivos_removidos == 0:
+            print("Nenhum arquivo .zip antigo para remover.")
+        # --- FIM DA NOVA REGRA ---
         
         return True
 
     except ftplib.error_perm as e:
         print(f"ERRO DE FTP: {e}")
-        print("Verifique as configurações no 'config.ini' ou se o arquivo da competência atual já está disponível no servidor.")
         return False
     except Exception as e:
         print(f"ERRO inesperado na extração: {e}")
         import traceback
         traceback.print_exc()
+        # Se o download falhar, mas um arquivo .zip existir, não tenta apagar
+        if caminho_local_zip and os.path.exists(caminho_local_zip):
+            print("Mantendo o arquivo baixado devido ao erro na etapa de descompactação/limpeza.")
         return False
 
 if __name__ == '__main__':
@@ -114,7 +128,6 @@ if __name__ == '__main__':
         config = carregar_config(project_root)
         
         if not download_and_unzip(config):
-            # Sai com um código de erro para o orquestrador saber que falhou
             sys.exit(1)
             
     except (FileNotFoundError, ValueError) as e:

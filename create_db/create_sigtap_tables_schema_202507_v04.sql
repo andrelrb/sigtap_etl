@@ -1,7 +1,7 @@
 
 -- Script SQL gerado para o banco SIGTAP
--- Arquivo: create_sigtap_tables_schema_202507_v01.sql
--- Data de geração: 2025-07-14 15:34:24
+-- Arquivo: create_sigtap_tables_schema_202507_v04.sql
+-- Data de geração: 2025-07-14 16:51:29
 
 CREATE TABLE IF NOT EXISTS public."tb_version" (
     id BIGSERIAL PRIMARY KEY,

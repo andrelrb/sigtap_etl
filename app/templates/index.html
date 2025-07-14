@@ -16,34 +16,20 @@
         <div class="progress-section">
             <h3>Progresso do Pipeline</h3>
             <div class="progress-bar-container">
-                <div class="progress-step" data-step="extraction">Extração</div>
-                <div class="progress-step" data-step="generate_schema">Gera Schema</div>
-                <div class="progress-step" data-step="execute_schema">Executa Schema</div>
-                <div class="progress-step" data-step="generate_inserts">Gera Inserts</div>
-                <div class="progress-step" data-step="execute_inserts">Executa Inserts</div>
+                <div class="progress-step" data-step="extraction">1. Extração</div>
+                <div class="progress-step" data-step="generate_schema">2. Gera Schema</div>
+                <div class="progress-step" data-step="execute_schema">3. Executa Schema</div>
+                <div class="progress-step" data-step="generate_inserts">4. Gera Inserts</div>
+                <div class="progress-step" data-step="execute_inserts">5. Executa Inserts</div>
             </div>
-
             <div class="progress-legend">
-                <div class="legend-item">
-                    <span class="legend-color status-success"></span>
-                    <span class="legend-text">Sucesso</span>
-                </div>
-                <div class="legend-item">
-                    <span class="legend-color status-error"></span>
-                    <span class="legend-text">Erro</span>
-                </div>
-                <div class="legend-item">
-                    <span class="legend-color status-running"></span>
-                    <span class="legend-text">Em Execução</span>
-                </div>
-                <div class="legend-item">
-                    <span class="legend-color status-pending"></span>
-                    <span class="legend-text">Pendente</span>
-                </div>
+                <div class="legend-item"><span class="legend-color status-success"></span><span class="legend-text">Sucesso</span></div>
+                <div class="legend-item"><span class="legend-color status-error"></span><span class="legend-text">Erro</span></div>
+                <div class="legend-item"><span class="legend-color status-running"></span><span class="legend-text">Em Execução</span></div>
+                <div class="legend-item"><span class="legend-color status-pending"></span><span class="legend-text">Pendente</span></div>
             </div>
             <button class="btn-reset" id="reset-progress">Resetar Progresso</button>
         </div>
-
 
         <div class="step-group">
             <h2>Etapa 1: Configuração</h2>
@@ -64,14 +50,12 @@
             </div>
         </div>
 
-
         <div class="step-group">
             <h2>Etapa 2: Instalação e Schema</h2>
             <div class="card">
                 <h3>Extração e Criação da Estrutura do Banco</h3>
                 <p>Esta seção prepara o ambiente, baixa os dados e cria a estrutura de tabelas (schema) no banco de dados.</p>
                 <p class="note warning"><strong>Atenção:</strong> Esta etapa deve ser executada apenas uma vez na instalação inicial do projeto.</p>
-                
                 <button class="btn" id="extraction">1. Baixar e Descompactar Dados</button>
                 <button class="btn" id="generate_schema">2. Gerar Script do Schema (DDL)</button>
                 <button class="btn" id="execute_schema">3. Executar Schema no Banco</button>
@@ -79,14 +63,12 @@
             </div>
         </div>
 
-
         <div class="step-group">
             <h2>Etapa 3: População do Banco</h2>
             <div class="card">
                 <h3>Geração e Execução de Inserts</h3>
                 <p>Lê os arquivos de dados, gera os scripts de INSERT e os executa para popular o banco de dados com a competência atual.</p>
                 <p class="note info"><strong>Info:</strong> Esta etapa deve ser executada mensalmente para atualizar os dados.</p>
-
                 <button class="btn" id="generate_inserts">4. Apenas Gerar Scripts</button>
                 <button class="btn" id="execute_inserts">5. Apenas Executar Scripts</button>
                 <button class="btn btn-success" id="run_population_pipeline">Executar Etapa Completa (4 + 5)</button>
@@ -96,12 +78,11 @@
     </div>
 
     <script>
-        // O código JavaScript permanece o mesmo, sem necessidade de alterações.
         function updateProgressBar() {
             document.querySelectorAll('.progress-step').forEach(stepElement => {
                 const stepId = stepElement.dataset.step;
                 const status = localStorage.getItem(`step-${stepId}`);
-                stepElement.classList.remove('status-pending', 'status-running', 'status-success', 'status-error');
+                stepElement.className = 'progress-step';
                 stepElement.classList.add(status ? `status-${status}` : 'status-pending');
             });
         }
@@ -110,27 +91,30 @@
             button.addEventListener('click', async (event) => {
                 const buttonId = event.target.id;
                 const outputBox = event.target.closest('.card').querySelector('.output-box');
-                
+
                 let endpoint;
                 let requestBody;
-                let stepsToUpdate = [buttonId];
+                let stepsToUpdateUI = [buttonId];
 
                 if (buttonId === 'run_population_pipeline') {
                     endpoint = '/run_population_pipeline';
                     requestBody = {};
-                    stepsToUpdate = ['generate_inserts', 'execute_inserts'];
+                    stepsToUpdateUI = ['generate_inserts', 'execute_inserts'];
                 } else {
                     endpoint = '/run_step';
                     requestBody = { step: buttonId };
                 }
-                
+
                 if (buttonId !== 'check_db_connection') {
-                    stepsToUpdate.forEach(stepId => localStorage.setItem(`step-${stepId}`, 'running'));
+                    stepsToUpdateUI.forEach(stepId => localStorage.setItem(`step-${stepId}`, 'running'));
                     updateProgressBar();
                 }
-                
-                outputBox.textContent = `Iniciando a(s) etapa(s)... Por favor, aguarde.`;
+
+                outputBox.textContent = 'Iniciando a(s) etapa(s)... Por favor, aguarde.';
                 document.querySelectorAll('.btn, .btn-reset').forEach(b => b.disabled = true);
+
+                let finalStatus = 'error';
+                let resultOutput = '';
 
                 try {
                     const response = await fetch(endpoint, {
@@ -139,28 +123,26 @@
                         body: JSON.stringify(requestBody),
                     });
                     const result = await response.json();
-                    
+                    finalStatus = result.status;
+                    resultOutput = result.output;
+                } catch (error) {
+                    resultOutput = 'Erro de comunicação com o servidor: ' + error;
+                    finalStatus = 'error';
+                } finally {
+                    outputBox.textContent = resultOutput;
+                    outputBox.className = 'output-box';
+                    outputBox.classList.add(finalStatus);
+
                     if (buttonId !== 'check_db_connection') {
-                         if (buttonId === 'run_population_pipeline') {
-                            const finalStatus = result.status;
+                        if (buttonId === 'run_population_pipeline') {
                             localStorage.setItem('step-generate_inserts', 'success');
                             localStorage.setItem('step-execute_inserts', finalStatus);
                         } else {
-                            localStorage.setItem(buttonId, result.status);
+                            // ✅ Correção aplicada aqui:
+                            localStorage.setItem(`step-${buttonId}`, finalStatus);
                         }
                     }
-                    
-                    outputBox.textContent = result.output;
-                    outputBox.classList.remove('success', 'error');
-                    outputBox.classList.add(result.status);
 
-                } catch (error) {
-                    if (buttonId !== 'check_db_connection') {
-                        stepsToUpdate.forEach(stepId => localStorage.setItem(`step-${stepId}`, 'error'));
-                    }
-                    outputBox.textContent = 'Erro de comunicação com o servidor: ' + error;
-                    outputBox.classList.add('error');
-                } finally {
                     updateProgressBar();
                     document.querySelectorAll('.btn, .btn-reset').forEach(b => b.disabled = false);
                 }
@@ -168,12 +150,12 @@
         });
 
         document.getElementById('reset-progress').addEventListener('click', () => {
-             if (confirm('Tem certeza que deseja resetar todo o progresso do pipeline?')) {
+            if (confirm('Tem certeza que deseja resetar todo o progresso do pipeline?')) {
                 localStorage.clear();
                 updateProgressBar();
                 document.querySelectorAll('.output-box').forEach(box => {
                     box.textContent = 'Pressione um botão para iniciar...';
-                    box.classList.remove('success', 'error');
+                    box.className = 'output-box';
                 });
                 alert('Progresso resetado!');
             }

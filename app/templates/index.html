@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Controle - SIGTAP ETL</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Painel de Controle - SIGTAP ETL</h1>
+            <p>Interface para execução do pipeline de Extração, Transformação e Carga.</p>
+        </header>
+
+        <div class="progress-section">
+            <h3>Progresso do Pipeline</h3>
+            <div class="progress-bar-container">
+                <div class="progress-step" data-step="extraction">Extração</div>
+                <div class="progress-step" data-step="generate_schema">Gera Schema</div>
+                <div class="progress-step" data-step="execute_schema">Executa Schema</div>
+                <div class="progress-step" data-step="generate_inserts">Gera Inserts</div>
+                <div class="progress-step" data-step="execute_inserts">Executa Inserts</div>
+            </div>
+
+            <div class="progress-legend">
+                <div class="legend-item">
+                    <span class="legend-color status-success"></span>
+                    <span class="legend-text">Sucesso</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color status-error"></span>
+                    <span class="legend-text">Erro</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color status-running"></span>
+                    <span class="legend-text">Em Execução</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color status-pending"></span>
+                    <span class="legend-text">Pendente</span>
+                </div>
+            </div>
+            <button class="btn-reset" id="reset-progress">Resetar Progresso</button>
+        </div>
+
+
+        <div class="step-group">
+            <h2>Etapa 1: Configuração</h2>
+            <div class="card">
+                <h3>Banco de Dados</h3>
+                <p>As configurações atuais são lidas do arquivo <strong>config.ini</strong>.</p>
+                <div class="config-details">
+                    {% if db_config %}
+                        {% for key, value in db_config.items() %}
+                        <p><strong>{{ key }}:</strong> {{ value }}</p>
+                        {% endfor %}
+                    {% else %}
+                        <p>Configurações do banco de dados não encontradas.</p>
+                    {% endif %}
+                </div>
+                <button class="btn" id="check_db_connection">Verificar Conexão com o Banco</button>
+                <pre class="output-box" id="output-config">Clique no botão para testar a conexão...</pre>
+            </div>
+        </div>
+
+
+        <div class="step-group">
+            <h2>Etapa 2: Instalação e Schema</h2>
+            <div class="card">
+                <h3>Extração e Criação da Estrutura do Banco</h3>
+                <p>Esta seção prepara o ambiente, baixa os dados e cria a estrutura de tabelas (schema) no banco de dados.</p>
+                <p class="note warning"><strong>Atenção:</strong> Esta etapa deve ser executada apenas uma vez na instalação inicial do projeto.</p>
+                
+                <button class="btn" id="extraction">1. Baixar e Descompactar Dados</button>
+                <button class="btn" id="generate_schema">2. Gerar Script do Schema (DDL)</button>
+                <button class="btn" id="execute_schema">3. Executar Schema no Banco</button>
+                <pre class="output-box" id="output-install">Pressione um botão para iniciar...</pre>
+            </div>
+        </div>
+
+
+        <div class="step-group">
+            <h2>Etapa 3: População do Banco</h2>
+            <div class="card">
+                <h3>Geração e Execução de Inserts</h3>
+                <p>Lê os arquivos de dados, gera os scripts de INSERT e os executa para popular o banco de dados com a competência atual.</p>
+                <p class="note info"><strong>Info:</strong> Esta etapa deve ser executada mensalmente para atualizar os dados.</p>
+
+                <button class="btn" id="generate_inserts">4. Apenas Gerar Scripts</button>
+                <button class="btn" id="execute_inserts">5. Apenas Executar Scripts</button>
+                <button class="btn btn-success" id="run_population_pipeline">Executar Etapa Completa (4 + 5)</button>
+                <pre class="output-box" id="output-populate">Pressione um botão para iniciar...</pre>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // O código JavaScript permanece o mesmo, sem necessidade de alterações.
+        function updateProgressBar() {
+            document.querySelectorAll('.progress-step').forEach(stepElement => {
+                const stepId = stepElement.dataset.step;
+                const status = localStorage.getItem(`step-${stepId}`);
+                stepElement.classList.remove('status-pending', 'status-running', 'status-success', 'status-error');
+                stepElement.classList.add(status ? `status-${status}` : 'status-pending');
+            });
+        }
+
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', async (event) => {
+                const buttonId = event.target.id;
+                const outputBox = event.target.closest('.card').querySelector('.output-box');
+                
+                let endpoint;
+                let requestBody;
+                let stepsToUpdate = [buttonId];
+
+                if (buttonId === 'run_population_pipeline') {
+                    endpoint = '/run_population_pipeline';
+                    requestBody = {};
+                    stepsToUpdate = ['generate_inserts', 'execute_inserts'];
+                } else {
+                    endpoint = '/run_step';
+                    requestBody = { step: buttonId };
+                }
+                
+                if (buttonId !== 'check_db_connection') {
+                    stepsToUpdate.forEach(stepId => localStorage.setItem(`step-${stepId}`, 'running'));
+                    updateProgressBar();
+                }
+                
+                outputBox.textContent = `Iniciando a(s) etapa(s)... Por favor, aguarde.`;
+                document.querySelectorAll('.btn, .btn-reset').forEach(b => b.disabled = true);
+
+                try {
+                    const response = await fetch(endpoint, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(requestBody),
+                    });
+                    const result = await response.json();
+                    
+                    if (buttonId !== 'check_db_connection') {
+                         if (buttonId === 'run_population_pipeline') {
+                            const finalStatus = result.status;
+                            localStorage.setItem('step-generate_inserts', 'success');
+                            localStorage.setItem('step-execute_inserts', finalStatus);
+                        } else {
+                            localStorage.setItem(buttonId, result.status);
+                        }
+                    }
+                    
+                    outputBox.textContent = result.output;
+                    outputBox.classList.remove('success', 'error');
+                    outputBox.classList.add(result.status);
+
+                } catch (error) {
+                    if (buttonId !== 'check_db_connection') {
+                        stepsToUpdate.forEach(stepId => localStorage.setItem(`step-${stepId}`, 'error'));
+                    }
+                    outputBox.textContent = 'Erro de comunicação com o servidor: ' + error;
+                    outputBox.classList.add('error');
+                } finally {
+                    updateProgressBar();
+                    document.querySelectorAll('.btn, .btn-reset').forEach(b => b.disabled = false);
+                }
+            });
+        });
+
+        document.getElementById('reset-progress').addEventListener('click', () => {
+             if (confirm('Tem certeza que deseja resetar todo o progresso do pipeline?')) {
+                localStorage.clear();
+                updateProgressBar();
+                document.querySelectorAll('.output-box').forEach(box => {
+                    box.textContent = 'Pressione um botão para iniciar...';
+                    box.classList.remove('success', 'error');
+                });
+                alert('Progresso resetado!');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', updateProgressBar);
+    </script>
+</body>
+</html>

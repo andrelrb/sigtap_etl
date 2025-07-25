@@ -1,0 +1,14 @@
+# Dockerfile.airflow
+# Versão: 1.1 (Correção de permissão de usuário para pip install)
+# Descrição: Cria uma imagem customizada para o Airflow,
+#            instalando as dependências do projeto da maneira correta.
+
+# Começa a partir da imagem oficial do Airflow
+FROM apache/airflow:2.9.2
+
+# Copia o arquivo de requisitos para dentro da imagem
+COPY requirements.txt /requirements.txt
+
+# Instala as dependências como o usuário padrão 'airflow'
+# As linhas "USER root" e "USER airflow" foram removidas.
+RUN pip install --no-cache-dir -r /requirements.txt

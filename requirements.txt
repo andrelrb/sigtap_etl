@@ -4,6 +4,7 @@
 
 psycopg2-binary
 Flask
+apache-airflow
 
 #Para a manipulação de datas (relativedelta), você precisará instalar uma biblioteca. Com o seu ambiente virtual ativo, rode:
 # BASH: pip install python-dateutil

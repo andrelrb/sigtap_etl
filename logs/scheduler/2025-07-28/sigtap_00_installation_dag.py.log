@@ -1,0 +1,238 @@
+[2025-07-28T23:43:14.369+0000] {processor.py:161} INFO - Started process (PID=850) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:43:14.371+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:43:14.386+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:43:14.379+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:43:14.471+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:43:14.602+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:43:14.601+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:43:14.637+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:43:14.636+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:43:14.679+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.320 seconds
+[2025-07-28T23:43:45.756+0000] {processor.py:161} INFO - Started process (PID=853) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:43:45.758+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:43:45.764+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:43:45.763+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:43:45.823+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:43:45.882+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:43:45.882+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:43:45.917+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:43:45.916+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:43:45.955+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.222 seconds
+[2025-07-28T23:44:16.279+0000] {processor.py:161} INFO - Started process (PID=856) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:44:16.281+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:44:16.284+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:44:16.284+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:44:16.315+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:44:16.356+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:44:16.356+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:44:16.376+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:44:16.376+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:44:16.403+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.131 seconds
+[2025-07-28T23:44:46.709+0000] {processor.py:161} INFO - Started process (PID=859) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:44:46.710+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:44:46.712+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:44:46.712+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:44:46.738+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:44:46.772+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:44:46.772+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:44:46.786+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:44:46.786+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:44:46.808+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.107 seconds
+[2025-07-28T23:45:17.077+0000] {processor.py:161} INFO - Started process (PID=862) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:45:17.078+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:45:17.081+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:45:17.080+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:45:17.117+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:45:17.163+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:45:17.162+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:45:17.183+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:45:17.183+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:45:17.218+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.148 seconds
+[2025-07-28T23:45:47.507+0000] {processor.py:161} INFO - Started process (PID=865) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:45:47.508+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:45:47.512+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:45:47.511+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:45:47.553+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:45:47.608+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:45:47.607+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:45:47.632+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:45:47.632+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:45:47.665+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.171 seconds
+[2025-07-28T23:46:17.947+0000] {processor.py:161} INFO - Started process (PID=868) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:46:17.948+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:46:17.950+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:46:17.949+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:46:17.971+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:46:18.000+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:46:18.000+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:46:18.014+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:46:18.014+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:46:18.032+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.092 seconds
+[2025-07-28T23:46:48.368+0000] {processor.py:161} INFO - Started process (PID=871) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:46:48.371+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:46:48.378+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:46:48.377+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:46:48.452+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:46:48.564+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:46:48.564+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:46:48.606+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:46:48.605+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:46:48.652+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.296 seconds
+[2025-07-28T23:47:18.925+0000] {processor.py:161} INFO - Started process (PID=874) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:47:18.926+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:47:18.929+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:47:18.928+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:47:18.953+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:47:18.985+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:47:18.985+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:47:18.999+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:47:18.999+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:47:19.019+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.099 seconds
+[2025-07-28T23:47:49.260+0000] {processor.py:161} INFO - Started process (PID=877) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:47:49.261+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:47:49.263+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:47:49.263+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:47:49.285+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:47:49.322+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:47:49.322+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:47:49.340+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:47:49.340+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:47:49.370+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.116 seconds
+[2025-07-28T23:48:19.742+0000] {processor.py:161} INFO - Started process (PID=880) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:48:19.744+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:48:19.746+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:48:19.746+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:48:19.769+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:48:19.798+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:48:19.798+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:48:19.813+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:48:19.812+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:48:19.841+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.106 seconds
+[2025-07-28T23:48:50.251+0000] {processor.py:161} INFO - Started process (PID=883) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:48:50.252+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:48:50.256+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:48:50.255+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:48:50.281+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:48:50.314+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:48:50.314+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:48:50.327+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:48:50.327+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:48:50.347+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.103 seconds
+[2025-07-28T23:49:20.595+0000] {processor.py:161} INFO - Started process (PID=886) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:49:20.596+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:49:20.598+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:49:20.597+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:49:20.621+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:49:20.650+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:49:20.649+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:49:20.663+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:49:20.662+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:49:20.680+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.091 seconds
+[2025-07-28T23:49:50.960+0000] {processor.py:161} INFO - Started process (PID=889) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:49:50.961+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:49:50.965+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:49:50.964+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:49:50.990+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:49:51.024+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:49:51.023+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:49:51.037+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:49:51.037+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:49:51.058+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.107 seconds
+[2025-07-28T23:50:21.373+0000] {processor.py:161} INFO - Started process (PID=892) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:50:21.374+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:50:21.388+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:50:21.384+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:50:21.440+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:50:21.520+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:50:21.519+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:50:21.560+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:50:21.559+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:50:21.604+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.246 seconds
+[2025-07-28T23:50:51.893+0000] {processor.py:161} INFO - Started process (PID=895) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:50:51.894+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:50:51.896+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:50:51.896+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:50:51.920+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:50:51.994+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:50:51.994+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:50:52.034+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:50:52.034+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:50:52.083+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.196 seconds
+[2025-07-28T23:51:22.425+0000] {processor.py:161} INFO - Started process (PID=898) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:51:22.426+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:51:22.429+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:51:22.428+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:51:22.452+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:51:22.482+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:51:22.482+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:51:22.495+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:51:22.495+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:51:22.514+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.095 seconds
+[2025-07-28T23:51:52.773+0000] {processor.py:161} INFO - Started process (PID=901) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:51:52.774+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:51:52.776+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:51:52.775+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:51:52.801+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:51:52.834+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:51:52.833+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:51:52.848+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:51:52.848+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:51:52.869+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.102 seconds
+[2025-07-28T23:52:23.115+0000] {processor.py:161} INFO - Started process (PID=904) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:52:23.116+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:52:23.118+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:52:23.117+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:52:23.139+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:52:23.173+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:52:23.172+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:52:23.187+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:52:23.187+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:52:23.206+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.097 seconds
+[2025-07-28T23:52:53.454+0000] {processor.py:161} INFO - Started process (PID=907) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:52:53.455+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:52:53.457+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:52:53.456+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:52:53.476+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:52:53.507+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:52:53.507+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:52:53.519+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:52:53.519+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:52:53.537+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.088 seconds
+[2025-07-28T23:53:23.829+0000] {processor.py:161} INFO - Started process (PID=910) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:53:23.830+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:53:23.832+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:53:23.832+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:53:23.851+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:53:23.882+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:53:23.882+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:53:23.896+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:53:23.896+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:53:23.916+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.093 seconds
+[2025-07-28T23:53:54.217+0000] {processor.py:161} INFO - Started process (PID=913) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:53:54.218+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:53:54.220+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:53:54.220+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:53:54.258+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:53:54.295+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:53:54.295+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:53:54.310+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:53:54.310+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:53:54.329+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.120 seconds
+[2025-07-28T23:54:24.589+0000] {processor.py:161} INFO - Started process (PID=916) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:54:24.590+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:54:24.592+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:54:24.592+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:54:24.613+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:54:24.642+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:54:24.642+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:54:24.655+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:54:24.655+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:54:24.672+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.088 seconds
+[2025-07-28T23:54:54.922+0000] {processor.py:161} INFO - Started process (PID=919) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:54:54.923+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:54:54.924+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:54:54.924+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:54:54.946+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:54:54.974+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:54:54.974+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:54:54.987+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:54:54.987+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:54:55.004+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.088 seconds
+[2025-07-28T23:55:25.248+0000] {processor.py:161} INFO - Started process (PID=922) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:55:25.249+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:55:25.250+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:55:25.250+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:55:25.271+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:55:25.303+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:55:25.303+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:55:25.317+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:55:25.316+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:55:25.338+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.097 seconds
+[2025-07-28T23:55:55.644+0000] {processor.py:161} INFO - Started process (PID=925) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:55:55.646+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:55:55.651+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:55:55.650+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:55:55.693+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:55:55.778+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:55:55.777+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:55:55.813+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:55:55.813+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:55:55.868+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.242 seconds
+[2025-07-28T23:56:26.201+0000] {processor.py:161} INFO - Started process (PID=928) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:56:26.202+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:56:26.204+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:56:26.204+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:56:26.233+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:56:26.276+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:56:26.274+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:56:26.297+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:56:26.297+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:56:26.329+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.137 seconds
+[2025-07-28T23:56:56.581+0000] {processor.py:161} INFO - Started process (PID=931) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:56:56.582+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:56:56.584+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:56:56.584+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:56:56.605+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:56:56.633+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:56:56.633+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:56:56.646+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:56:56.646+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:56:56.663+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.087 seconds
+[2025-07-28T23:57:26.968+0000] {processor.py:161} INFO - Started process (PID=934) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:57:26.974+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:57:26.981+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:57:26.978+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:57:27.051+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:57:27.137+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:57:27.137+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:57:27.176+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:57:27.176+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:57:27.225+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.268 seconds
+[2025-07-28T23:57:57.484+0000] {processor.py:161} INFO - Started process (PID=937) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:57:57.485+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:57:57.487+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:57:57.486+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:57:57.507+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:57:57.538+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:57:57.538+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:57:57.551+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:57:57.550+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:57:57.567+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.088 seconds
+[2025-07-28T23:58:27.853+0000] {processor.py:161} INFO - Started process (PID=940) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:58:27.854+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:58:27.855+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:58:27.855+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:58:27.876+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:58:27.907+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:58:27.907+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:58:27.923+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:58:27.923+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:58:27.942+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.095 seconds
+[2025-07-28T23:58:58.179+0000] {processor.py:161} INFO - Started process (PID=943) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:58:58.180+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:58:58.183+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:58:58.182+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:58:58.204+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:58:58.234+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:58:58.234+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:58:58.249+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:58:58.248+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:58:58.270+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.096 seconds
+[2025-07-28T23:59:28.796+0000] {processor.py:161} INFO - Started process (PID=946) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:59:28.798+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:59:28.800+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:59:28.800+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:59:28.823+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:59:28.853+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:59:28.853+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:59:28.867+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:59:28.867+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:59:28.888+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.098 seconds
+[2025-07-28T23:59:59.144+0000] {processor.py:161} INFO - Started process (PID=949) to work on /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:59:59.145+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sigtap_00_installation_dag.py for tasks to queue
+[2025-07-28T23:59:59.148+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:59:59.147+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:59:59.170+0000] {processor.py:840} INFO - DAG(s) 'sigtap_00_installation' retrieved from /opt/airflow/dags/sigtap_00_installation_dag.py
+[2025-07-28T23:59:59.206+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:59:59.206+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-07-28T23:59:59.223+0000] {logging_mixin.py:188} INFO - [2025-07-28T23:59:59.222+0000] {dag.py:3954} INFO - Setting next_dagrun for sigtap_00_installation to None, run_after=None
+[2025-07-28T23:59:59.246+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sigtap_00_installation_dag.py took 0.109 seconds
